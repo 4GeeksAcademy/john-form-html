@@ -16,12 +16,12 @@
 </head>
 
 <body class="bg-dark">
-    <div class="container bg-white p-0 mt-2">
-        <div class="bg-light p-2 rounded-2">
-            <h2 class="bg-light">Payment form example</h2>
+    <div class="container bg-white p-0 mt-2 border border-secondary">
+        <div class="bg-light p-2 border-bottom border-secondary">
+            <h2 class="bg-light ms-3">Payment form example</h2>
         </div>
-        <div class="opacity-50 bg-danger rounded-2 m-4">
-            <h6 class="p-3">Some fields are missing</h6>
+        <div class="bg-danger bg-opacity-25 rounded-2 m-4 p-2">
+            <h6 class="text-danger-emphasis">Some fields are missing</h6>
         </div>
         <form>
             <div class="row g-5 mx-1">
@@ -37,7 +37,7 @@
                 <div class="col-sm-4">
                     <label for="amount" class="form-label">Amount</label>
                     <div class="input-group">
-                       <span class="input-group-text">$</span>
+                        <span class="input-group-text">$</span>
                         <input type="number" class="form-control d-inline" id="amount" placeholder="Amount"
                             aria-describedby="amount-total">
                     </div>
@@ -52,10 +52,73 @@
                     <label for="last-name" class="form-label">Last Name</label>
                     <input type="text" class="form-control" id="last-name" aria-describedby="last-name">
                 </div>
-            </div>        
+            </div>
+            <div class="row g-5 mx-1 pt-4">
+                <div class="col-sm-6">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" class="form-control" id="city" aria-describedby="city">
+                </div>
+                <div class="col-sm-3">
+                    <label for="state" class="form-label">State</label>
+                    <select class="form-select" id="state" aria-label="Default select example">
+                        <option selected>Pick a State</option>
+                        <option value="1">Montevideo</option>
+                        <option value="2">Buenos Aires</option>
+                        <option value="3">Washington</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <label for="postal-code" class="form-label">Postal Code</label>
+                    <input type="number" class="form-control" id="postal-code" aria-describedby="postal-code">
+                </div>
+            </div>
+            <div class="row m-4 align-items-start">
+                <div class="col-md-6">
+                    <label class="form-label fw-bold d-block mb-2" for="inlineRadio1">We accept:</label>
+                    <div class="p-2 bg-secondary rounded-2 d-inline-flex align-items-center gap-3 text-white">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1"><i
+                                    class="fa-brands fa-cc-mastercard"></i></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2"><i
+                                    class="fa-brands fa-cc-visa"></i></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                value="option3">
+                            <label class="form-check-label" for="inlineRadio3"><i
+                                    class="fa-brands fa-cc-diners-club"></i></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+                                value="option4">
+                            <label class="form-check-label" for="inlineRadio4"><i
+                                    class="fa-brands fa-cc-amex"></i></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="floatingTextarea2">Message</label>
+                    <div class="form-floating my-2">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                            style="height: 100px"></textarea>
+                    </div>
+                    <div class="form-text">
+                        <label for="floatingTextarea2">Add any notes here.</label>
+                    </div>
+                </div>
+            </div>
         </form>
+        <div class="d-grid gap-1 d-md-flex justify-content-md-end bg-light p-2 border-top border-secondary">
+            <button class="btn btn-primary me-md-2 bg-secondary px-3" type="button">Cancel</button>
+            <button class="btn btn-primary me-4" type="button">Send</button>
+        </div>
     </div>
-
 </body>
 
 </html>
